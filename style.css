@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
+/* before, after, current --- always border-box, margin, padding is 0 */
 *,
 *::before,
 *::after {
@@ -8,12 +9,20 @@
   box-sizing: border-box;
 }
 
+img, h1#heading, body {
+  margin-top: 0px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
   background-color: #f5f5f5;
+
+  height: 100vh;
+  /* to remove scrollbar : overflow: hidden; */
+  overflow: hidden;
 }
 
 header {
@@ -32,6 +41,10 @@ header h1 {
   max-width: 500px;
   margin: 30px auto;
   padding: 20px;
+}
+
+.edit-mode {
+  color: #ccc;
 }
 
 /* Form & Input */
@@ -59,7 +72,7 @@ header h1 {
 
 /* Buttons */
 .btn {
-  background-color: #333;
+  background-color: #34c943;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -67,8 +80,8 @@ header h1 {
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #444;
+button.btn:hover {
+  background-color: #2e8328;
 }
 
 .btn-link {
@@ -92,8 +105,16 @@ header h1 {
   cursor: pointer;
 }
 
-.btn-clear:hover {
-  background-color: #f1f1f1;
+button.btn-clear:hover {
+  background-color: #949c48;
+}
+
+.items li:hover {
+  background-color: #949c48;
+}
+
+.fa-xmark:hover {
+  background-color: #944b18;
 }
 
 .text-red {
@@ -106,6 +127,7 @@ header h1 {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between; 
 }
 
 .items li {
@@ -117,6 +139,7 @@ header h1 {
   padding: 10px 15px;
   margin: 0 5px 20px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -124,3 +147,10 @@ header h1 {
     width: 100%;
   }
 }
+
+
+
+/* my changes */
+/* icon#list-icon {
+  text-align: right;
+} */
