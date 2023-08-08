@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT AWSOME LINK -- FOR CROSS MARKS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -14,13 +16,22 @@
     <link rel="stylesheet" href="style.css" />
     <title>Shopping List</title>
   </head>
-  <body>
-    <div class="container">
+
+
+  <body id='html-body'>
+    
+    <div class="container"> <!-- wrapper class -->
+
+      <!-- HEADER SECTION OF DOC -->
       <header>
         <img src="images/note.png" alt="" />
-        <h1>Shopping List</h1>
+        <h1 id='heading'>Shopping List</h1>
       </header>
+
+      <!-- FORM -->
       <form id="item-form">
+
+        <!-- ENTER ITEM -->
         <div class="form-control">
           <input
             type="text"
@@ -30,13 +41,18 @@
             placeholder="Enter Item"
           />
         </div>
+
+        <!-- ADD ITEM -->
         <div class="form-control">
+          <!-- ADD ITEM : BUTTON : TYPE = SUBMIT -->
           <button type="submit" class="btn">
             <i class="fa-solid fa-plus"></i> Add Item
           </button>
         </div>
+        
       </form>
 
+      <!-- FILTER -->
       <div class="filter">
         <input
           type="text"
@@ -44,33 +60,17 @@
           id="filter"
           placeholder="Filter Items"
         />
+
       </div>
 
+      <!-- ITEMS IN OUR SHOPPING LIST -->
       <ul id="item-list" class="items">
-        <li>
-          Apples
+        <!-- <li>
+          Sample_item_name
           <button class="remove-item btn-link text-red">
             <i class="fa-solid fa-xmark"></i>
           </button>
-        </li>
-        <li>
-          Orange Juice
-          <button class="remove-item btn-link text-red">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
-        <li>
-          Oreos
-          <button class="remove-item btn-link text-red">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
-        <li>
-          Milk
-          <button class="remove-item btn-link text-red">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
+        </li> -->
       </ul>
 
       <button id="clear" class="btn-clear">Clear All</button>
